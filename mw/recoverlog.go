@@ -15,7 +15,7 @@ func RecoverAndLog(db *sql.DB) func(http.Handler) http.Handler {
 					logs.Err(db, "panic", "unhandled panic in handler",
 						fmt.Errorf("%v", rec),
 						map[string]any{"method": r.Method, "path": r.URL.Path},
-						"",
+						0,
 					)
 					http.Error(w, http.StatusText(500), 500)
 				}
