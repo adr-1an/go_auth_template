@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS users (
+    id BIGINT PRIMARY KEY,
+    name VARCHAR(64) NOT NULL,
+    email VARCHAR(254) NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    email_verified BOOL NOT NULL DEFAULT FALSE,
+    deleted_at TIMESTAMPTZ
+);

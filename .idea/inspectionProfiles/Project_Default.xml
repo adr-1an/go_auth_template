@@ -1,0 +1,18 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="109" name="Go" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="GoDfaErrorMayBeNotNil" enabled="true" level="WARNING" enabled_by_default="true">
+      <functions>
+        <function importPath="net/http" name="NewRequest" />
+      </functions>
+      <methods>
+        <method importPath="github.com/aws/aws-sdk-go-v2/service/s3" receiver="*PresignClient" name="PresignGetObject" />
+      </methods>
+    </inspection_tool>
+  </profile>
+</component>

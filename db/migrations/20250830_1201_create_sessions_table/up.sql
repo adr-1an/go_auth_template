@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS sessions (
+    id BIGINT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    token_hash BYTEA NOT NULL UNIQUE,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    last_used_at TIMESTAMPTZ DEFAULT NOW(),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
